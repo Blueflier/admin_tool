@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Class Schedule Copier",
+    "version": "1.0",
+    "description": "Copies class schedule details to clipboard when clicking a row.",
+    "permissions": ["clipboardWrite", "activeTab", "scripting"],
+    "content_scripts": [
+      {
+        "matches": ["https://banner.biola.edu:9020/StudentRegistrationSsb/ssb/classSearch/classSearch"],
+        "css": [],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+      "default_icon": "cards.png"
+    },
+    "icons": {
+      "128": "cards.png"
+    }
+  }
